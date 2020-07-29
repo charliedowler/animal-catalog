@@ -1,34 +1,15 @@
 {
-  "name": "animal-catalog",
-  "version": "0.1.0",
+  "name": "root",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cypress": "cypress open",
+    "cypress-run": "cypress run",
+    "setup": "npm i; lerna bootstrap",
+    "start-client": "cd packages/client;npm start;cd ../../",
+    "start-server": "cd packages/server;npm start;cd ../../"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "cypress": "^4.11.0",
+    "lerna": "^3.22.1"
   }
 }
